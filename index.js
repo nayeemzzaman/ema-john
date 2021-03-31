@@ -8,7 +8,9 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.yuvpr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 const port = 4000;
-
+app.get('/', (req, res) =>{
+    res.send("Hello form Database. It's under construction");
+})
 app.use(bodyParser.json());
 app.use(cors());
 
